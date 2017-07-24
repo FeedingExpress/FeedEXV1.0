@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign In Page</ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-content class="background">
+	<ion-card>
+		<ion-card-header>
+			Log In
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list no-line>
+				<ion-item>
+					<ion-input type="text" placeholder="Username"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" placeholder="Password"></ion-input>
+				</ion-item>
+        <ion-item>
+              <ion-label>Save Username</ion-label>
+              <ion-toggle color="energized"></ion-toggle>
+            </ion-item>
+        <button ion-button icon-only block color="dark" (click)="signIn();">
+         Sign In
+         </button>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+	<button class="bottom" ion-button clear full color="dark" (click)="signup();">
+  Don't have an account? Sign up
+</button>
+</ion-content>

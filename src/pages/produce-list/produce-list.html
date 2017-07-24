@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Produce List</ion-title>
+    <ion-icon id="notification" name="notifications"></ion-icon>
+    <ion-icon id="send-notification" name="send" (click)="sendNotification()"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-card *ngFor="let card of posts">
+      <ion-card-content>
+        <ion-card-title>
+          {{card.produce}}
+        </ion-card-title>
+        <p>
+          {{card.Cost}}
+        </p>
+        <p>
+          {{card.expiry}}
+        </p>
+        <p>
+          {{card.pallets}}
+        </p>
+        <p>
+          {{card.Pack}}
+        </p>
+
+      </ion-card-content>
+        </ion-card>
+  </ion-list>
+  <div>
+  </div>
+  <button ion-button icon-only block color="dark" (click)="addProduce()">
+    <ion-icon name="add-circle"></ion-icon>
+  </button>
+  </ion-content>
